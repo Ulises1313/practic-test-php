@@ -1,0 +1,136 @@
+<!-- Developed by Ulises Reyes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejemplo Practico CCA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Ejemplo Practico CCA</a>
+        <span class="navbar-text"> Ulises Reyes</span>
+      </div>
+    </nav>
+    <div class="alert alert-success p-4 m-3" role="alert" id="alert"></div>
+    <!-- Container fluid para que use todo el ancho y damos un paddig y un margin-->
+    <div class="container-fluid px-5 my-5">
+      <!-- Creo una fila y el contenido lo centro-->
+      <div class="row justify-content-center">
+        <!-- Creamos una columna asgigando que en pantallas grandes ocupe lo mayormente posible
+            y usamos 10 de 12 columnas-->
+        <div class="col-xl-10">
+          <!-- Tarjeta principal sin borde y sombra -->
+          <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+            <!-- Cuerpo de la tarjeta sin padding -->
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+                <div class="col-sm-6 p-4">
+                  <div class="text-center">
+                    <div class="h3 fw-ligth">Contáctanos</div>
+                    <p class="mb-4 text-muted">Ingresa tus datos de contacto</p>
+                  </div>
+                  <form id="contact-form" novalidate>
+                    <!-- form-floating para hacer un efecto-->
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Nombre"
+                        required
+                      />
+                      <label for="name">Nombre</label>
+                    </div>
+                    <div class="text-danger" id="invalid-name"></div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        id="age"
+                        class="form-control"
+                        placeholder="edad"
+                        required
+                      />
+                      <label for="age">Edad</label>
+                    </div>
+                    <div class="text-danger" id="invalid-age"></div>
+                    <div><label for="gender">Sexo</label></div>
+                    <section class="mb-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="gender"
+                          id="masculino"
+                          value="Masculino"
+                        />
+                        <label class="form-check-label" for="masculino"
+                          >Masculino</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="gender"
+                          id="femenino"
+                          value="Femenino"
+                        />
+                        <label class="form-check-label" for="femenino"
+                          >Femenino</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="gender"
+                          id="otro"
+                          value="Otro"
+                          checked
+                        />
+                        <label class="form-check-label" for="otro">Otro</label>
+                      </div>
+                    </section>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        id="birthdate"
+                        class="form-control"
+                        placeholder="Fecha de nacimiento (MM/DD/AAAA)"
+                        required
+                      />
+                      <label for="birthdate">Fecha de nacimiento</label>
+                      <small class="text-muted">Formato: MM/DD/AAAA</small>
+                    </div>
+                    <div class="text-danger" id="invalid-birthdate"></div>
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-primary" type="submit" id="send">
+                        Enviar Datos
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="form.js"></script>
+  </body>
+</html>
